@@ -1,0 +1,74 @@
+<html>
+        <body><!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>BMI calculator</h1>
+       <input type="number" placeholder="Enter Your Height (in Meters)" id="hm">
+      <br>
+      <br>
+      <input type="number" placeholder="Enter Your Weight (in Kgs)" id="wk">
+      <br>
+      <br>
+      <button onclick="check()">Calculate</button>
+      <p id="answer"></p>
+      <img src="https://www.livewellcampaign.co.uk/app/uploads/2017/09/shutterstock_305430554-1-847x1024.jpg" height="330px" width="500px">
+    </body>
+</html></body>
+        <style>body{
+    background-color: aquamarine;
+    color: teal;
+    text-align: center;
+}
+input{
+    
+  background-color: aqua;
+  border-radius: 50px;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+}
+button{
+     
+  background-color: aqua;
+  border-radius: 50px;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  
+}
+p{
+  font-size: 35px;
+  font-weight: bold;
+}</style>
+        <script>function check(){
+    var height="";
+  height= document.getElementById("hm").value;
+  var weight="";
+  weight= document.getElementById("wk").value;
+ var bmi;
+ bmi= weight / (height * height);
+ bmi = bmi.toFixed(1);
+if(bmi < 18.5){
+    document.getElementById("answer").innerHTML="you are under weight"
+      document.getElementById("answer").style.color="lightgreen"
+}
+else if(bmi <= 24.9){
+ document.getElementById("answer").innerHTML="you are normal weight"
+    document.getElementById("answer").style.color="green"
+}
+else if(bmi <= 29.9){
+     document.getElementById("answer").innerHTML="you are over weight"
+        document.getElementById("answer").style.color="yellow"
+}
+else if(bmi <=34.9){
+     document.getElementById("answer").innerHTML="you are obese"
+        document.getElementById("answer").style.color="orange"
+}
+else{
+     document.getElementById("answer").innerHTML="you are extremly obese"
+        document.getElementById("answer").style.color="red"
+}
+}
+</script>
+      </html>
